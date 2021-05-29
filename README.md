@@ -1,0 +1,1 @@
+Fiz uma aplicação que irá buscar por diretórios em uma página Web, você apenas precisara digitar a URL no campo input. Essa aplicação contem uma Interface feita com PySimpleGui
