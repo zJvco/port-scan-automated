@@ -20,10 +20,12 @@ def searchTool(win, host):
         for p in path:
             req = requests.get(host + p)
             url = req.url
+            statusCode = req.status_code
 
-            if req.status_code == 200:
-                print(
-                    f"Foi descoberto um diretório: {url} - Status: {req.status_code}")
+            if statusCode == 200:
+                print(f"Foi encontrado um diretório: {url} - Status: {statusCode}.")
+            else:
+                print(f"O diretório {url} não foi encontrado.")
 
             win.refresh()
         print("Escaneamento finalizado...")
